@@ -1,32 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { OktaAuthService } from '@okta/okta-angular';
 import { Product } from './product';
 
-const baseUrl = 'http://localhost:81';
+// var host = process.env.COMPONENT_BACKEND_HOST || 'localhost';
+// var port = process.env.COMPONENT_BACKEND_PORT || 8081;
+
+const baseUrl = 'http://backend-app-stage.apps.aballant-2021-04-29.devcluster.openshift.com';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  // constructor(public oktaAuth: OktaAuthService, private http: HttpClient) {
-  // }
-
   constructor(private http: HttpClient) {
   }
 
   private async request(method: string, url: string, data?: any, responseType?: any) {
-    // const token = await this.oktaAuth.getAccessToken();
 
     console.log('request ' + JSON.stringify(data));
     const result = this.http.request(method, url, {
       body: data,
       responseType: responseType || 'json',
       observe: 'body',
-      // headers: {
-      //   Authorization: `Bearer ${token}`
-      // }
     });
     return new Promise<any>((resolve, reject) => {
       result.subscribe(resolve as any, reject as any);
