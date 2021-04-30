@@ -5,7 +5,7 @@ import { Product } from './product';
 // var host = process.env.COMPONENT_BACKEND_HOST || 'localhost';
 // var port = process.env.COMPONENT_BACKEND_PORT || 8081;
 
-const baseUrl = 'http://backend-app-stage.apps.aballant-2021-04-29.devcluster.openshift.com';
+const baseUrl = 'http://backend-app.stage.svc:8080';
 
 @Injectable({
   providedIn: 'root'
