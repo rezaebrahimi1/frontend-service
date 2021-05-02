@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: frontend-app
-        image: quay.io/isequeir/frontend-service:v1.0.0
+        image: quay.io/isequeir/frontend-service:latest
         imagePullPolicy: Always
         volumeMounts:
         - name: web-files
