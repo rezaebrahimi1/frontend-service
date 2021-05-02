@@ -5,7 +5,7 @@ import { Product } from './product';
 // var host = process.env.COMPONENT_BACKEND_HOST || 'localhost';
 // var port = process.env.COMPONENT_BACKEND_PORT || 8081;
 
-const baseUrl = 'http://backendServer';
+const baseUrl = 'http://backend-server';
 
 @Injectable({
   providedIn: 'root'
