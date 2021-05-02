@@ -16,6 +16,6 @@ RUN npm run build
 # Stage 2
 # FROM nginx:1.17.1-alpine
 FROM nginxinc/nginx-unprivileged:1.17.1-alpine
-RUN rm /etc/nginx/nginx.conf
+# RUN rm /etc/nginx/conf.d/default.conf
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY --from=build-step /app/dist /usr/share/nginx/html
