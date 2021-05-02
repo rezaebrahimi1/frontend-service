@@ -5,7 +5,7 @@ import { Product } from './product';
 // var host = process.env.COMPONENT_BACKEND_HOST || 'localhost';
 // var port = process.env.COMPONENT_BACKEND_PORT || 8081;
 
-const baseUrl = 'http://backend-app-stage.apps.ci-ln-48k398t-f76d1.origin-ci-int-gce.dev.openshift.com';
+const baseUrl = 'http://backendServer';
 
 @Injectable({
   providedIn: 'root'
