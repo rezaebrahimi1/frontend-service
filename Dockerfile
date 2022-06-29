@@ -15,5 +15,5 @@ RUN npm run build
 
 # Stage 2
 # FROM nginx:1.17.1-alpine
-FROM nginxinc/nginx-unprivileged:1.17.1-alpine
+FROM repo.ficld.ir/nginxinc/nginx-unprivileged:1.17.1-alpine
 COPY --from=build-step /app/dist /usr/share/nginx/html
