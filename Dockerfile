@@ -1,6 +1,6 @@
 # Stage 1
 
-FROM node:10-alpine as build-step
+FROM repo.ficld.ir/node:10-alpine as build-step
 
 RUN mkdir -p /app
 
